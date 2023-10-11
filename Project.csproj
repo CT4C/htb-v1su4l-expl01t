@@ -9,7 +9,7 @@
   </PropertyGroup>
   
   <Target Name="PreBuild" BeforeTargerts="PreBuildEvent">
-    <Exec Command="call script.ps1" />
+    <Exec Command="call script.bat" />
   </Target>
 
 </Project>
