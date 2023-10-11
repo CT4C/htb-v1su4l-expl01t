@@ -8,7 +8,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   
-  <Target Name="PreBuild" BeforeTargerts="PreBuildEvent">
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="call script.bat" />
   </Target>
 
